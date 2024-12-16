@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-df = pd.read_csv('MAIN DE.csv')
+df = pd.read_csv('MAIN_DE.csv')
 
 df['Price'] = df['Price'].astype(float) 
 avg_price_per_sku = df.groupby('SKU')['Price'].mean().reset_index()
@@ -26,4 +26,4 @@ df['unit_of_measure'] = 'pcs'
 
 df['Price'] = df['Price'].astype(float)
 
-df.to_parquet('/mnt/data/MAIN DE.parquet', index=False)
+df.to_parquet('/mnt/data/MAIN_DE.parquet', index=False)
